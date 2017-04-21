@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { apiUrl } from '../AuthService'
+<<<<<<< HEAD
 import { getDelete } from '../generalService'
+=======
+>>>>>>> origin/master
 import EditForm from './editForm';
 const apiToken = localStorage.getItem('api_token');
 let testdata = (urlData) => fetch(urlData, {
@@ -57,10 +60,14 @@ class listChanel extends Component {
     );
 
   }
+<<<<<<< HEAD
 delete(ids){
   this.componentDidMount();
 getDelete(apiUrl + '/rest/kanal-delete/' + ids);
 }
+=======
+
+>>>>>>> origin/master
   handleChange(event) {
     console.log(event.currentTarget.id);
 
@@ -86,7 +93,11 @@ getDelete(apiUrl + '/rest/kanal-delete/' + ids);
   }
 
   currentChanel(kanal) {
+<<<<<<< HEAD
    // console.log(kanal);
+=======
+    console.log(kanal);
+>>>>>>> origin/master
     this.setState({
       currentChanel: kanal
     });
@@ -100,9 +111,16 @@ getDelete(apiUrl + '/rest/kanal-delete/' + ids);
 
 
   render() {
+<<<<<<< HEAD
     this.state.kanallar.sort(function (a,b) {
       return a.orderId - b.orderId;
     });
+=======
+    this.state.kanallar.sort(function (a) {
+      return a.orderId;
+    });
+
+>>>>>>> origin/master
     let listem = this.state.kanallar.map((kanal) =>
       <tr key={kanal.id}>
         <td>{kanal.orderId}</td>
@@ -111,7 +129,11 @@ getDelete(apiUrl + '/rest/kanal-delete/' + ids);
         <td>{kanal.imageUrl}</td>
         <td>
           <button onClick={this.currentChanel.bind(this, kanal)} type="button" className="btn btn-primary btn-sm">Edit</button>
+<<<<<<< HEAD
           <button onClick={this.delete.bind(this, kanal.id)} type="button" className="btn btn-danger btn-sm">delete</button>
+=======
+
+>>>>>>> origin/master
         </td>
       </tr>
     );
@@ -151,7 +173,11 @@ getDelete(apiUrl + '/rest/kanal-delete/' + ids);
         <Modal isOpen={this.state.large} toggle={this.toggleLarge} className={'modal-primary modal-lg ' + this.props.className}>
           <ModalHeader toggle={this.toggleLarge}>{this.state.currentChanel.name}</ModalHeader>
           <ModalBody>
+<<<<<<< HEAD
             <EditForm denge={this.toggleLarge} current={this.state.currentChanel} />
+=======
+            <EditForm denge={this.changeDenge} current={this.state.currentChanel} />
+>>>>>>> origin/master
           </ModalBody>
 
         </Modal>

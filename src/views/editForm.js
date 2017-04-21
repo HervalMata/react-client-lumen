@@ -1,12 +1,41 @@
 import React, { Component } from 'react'
 import { getCategories } from '../generalService'
 import { apiUrl } from '../AuthService'
+<<<<<<< HEAD
 
 class EditForm extends Component {
     constructor(props) {
         super(props);
         // console.log(this.props);
         this.state = { form: this.props.current, kategoriler: [] };
+=======
+const kanalDuzenle = (postUrl, data) => {
+    let apiToken = localStorage.getItem('api_token');
+    fetch(postUrl, {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': apiToken
+        },
+        body: JSON.stringify(data)
+
+    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (result) {
+            console.log('success', result);
+        })
+        .catch(function (error) {
+            console.log('Request failed', error);
+        });
+}
+class EditForm extends Component {
+    constructor(props) {
+        super(props);
+       // console.log(this.props);
+        this.state = { form: this.props.current, kategoriler : [] };
+>>>>>>> origin/master
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -20,12 +49,20 @@ class EditForm extends Component {
     }
 
     handleChange(event) {
+<<<<<<< HEAD
         event.preventDefault();
         let formData = this.state.form;
         let target = event.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
         //target.value = formData[name];
+=======
+        let formData = this.state.form;
+        let target = event.target;
+        let value = target.type === 'checkbox' ? target.checked : target.value;
+        target.value = formData[name];
+        let name = target.name;
+>>>>>>> origin/master
         formData[name] = value;
         this.setState({ form: formData });
 
@@ -33,6 +70,7 @@ class EditForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+<<<<<<< HEAD
         this.props.denge();
         kanalDuzenle(apiUrl + '/rest/kanal-update/' + this.state.form.id, this.state.form);
     }
@@ -48,6 +86,19 @@ class EditForm extends Component {
         let kategoriler = this.state.kategoriler.map((kategori, index) =>
             <option key={index} value={kategori.id}>{kategori.name}</option>
         );
+=======
+        this.props.denge(this.state.form);
+        kanalDuzenle(apiUrl + '/rest/kanal-update/' + this.state.form.id, this.state.form);
+    }
+    render() {
+this.state.kategoriler.sort(function(a, b) {
+  return a.orderId - b.orderId;
+});
+
+    let kategoriler = this.state.kategoriler.map((kategori, index) =>
+     <option key={index} value={kategori.id}>{kategori.name}</option>
+    );
+>>>>>>> origin/master
         return (
             <div>
                 <form onChange={this.handleChange} className="form-horizontal " onSubmit={this.handleSubmit}>
@@ -125,7 +176,11 @@ class EditForm extends Component {
                         <div className="col-md-9">
                             <select value={this.state.form.catId} id="catId" name="catId" className="form-control">
                                 <option value="0">Kategoriler</option>
+<<<<<<< HEAD
                                 {kategoriler}
+=======
+                                 {kategoriler}                   
+>>>>>>> origin/master
                             </select>
                         </div>
                     </div>
@@ -148,6 +203,7 @@ class EditForm extends Component {
     }
 }
 
+<<<<<<< HEAD
 const kanalDuzenle = (postUrl, data) => {
     let apiToken = localStorage.getItem('api_token');
     fetch(postUrl, {
@@ -169,4 +225,6 @@ const kanalDuzenle = (postUrl, data) => {
             console.log('Request failed', error);
         });
 }
+=======
+>>>>>>> origin/master
 export default EditForm

@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { apiUrl } from '../AuthService'
 import EditCategory from './editCategory';
+<<<<<<< HEAD
 import { getDelete } from '../generalService';
+=======
+>>>>>>> origin/master
 const apiToken = localStorage.getItem('api_token');
 let getData = (urlData) => fetch(urlData, {
   method: 'get',
@@ -56,12 +59,15 @@ class listCategory extends Component {
     //console.log(event.currentTarget.id);
   }
 
+<<<<<<< HEAD
 delete(ids){
 this.componentDidMount();
 getDelete(apiUrl + '/rest/kategori-delete/' + ids);
 }
 
 
+=======
+>>>>>>> origin/master
   toggle() {
     this.setState({
       modal: !this.state.modal
@@ -99,7 +105,11 @@ getDelete(apiUrl + '/rest/kategori-delete/' + ids);
         <td>{kategori.iconName}</td>
         <td>
           <button onClick={this.currentCategory.bind(this, kategori)} type="button" className="btn btn-primary btn-sm">Edit</button>
+<<<<<<< HEAD
           <button onClick={this.delete.bind(this, kategori.id)} type="button" className="btn btn-danger btn-sm">delete</button>
+=======
+
+>>>>>>> origin/master
         </td>
       </tr>
     );
@@ -135,7 +145,11 @@ getDelete(apiUrl + '/rest/kategori-delete/' + ids);
         <Modal isOpen={this.state.large} toggle={this.toggleLarge} className={'modal-primary modal-lg ' + this.props.className}>
           <ModalHeader toggle={this.toggleLarge}>{this.state.currentCategory.name}</ModalHeader>
           <ModalBody>
+<<<<<<< HEAD
             <EditCategory denge={this.toggleLarge} current={this.state.currentCategory} />
+=======
+            <EditCategory denge={this.changeDenge} current={this.state.currentCategory} />
+>>>>>>> origin/master
           </ModalBody>
 
         </Modal>

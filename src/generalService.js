@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 //import { browserHistory } from 'react-router';
 //const loginModel = { 'email': '', 'password': '' }
+=======
+import { browserHistory } from 'react-router';
+const loginModel = { 'email': '', 'password': '' }
+>>>>>>> origin/master
 const apiToken = localStorage.getItem('api_token');
 export const getCategories = (urlData) => fetch(urlData, {
   method: 'get',
@@ -17,6 +22,7 @@ export const getCategories = (urlData) => fetch(urlData, {
     .catch(function (error) {
       console.log('Request failed', error);
     });
+<<<<<<< HEAD
 
 
 
@@ -41,3 +47,8 @@ export const getDelete = (urlData) => fetch(urlData, {
 
 
 export const getUser = () => {}
+=======
+export const getUser = () => {}
+
+//export {getCategories};
+>>>>>>> origin/master

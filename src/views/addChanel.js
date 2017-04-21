@@ -17,7 +17,10 @@ const kanalEkle = (postUrl, data) => {
             return response.json();
         })
         .then(function (result) {
+<<<<<<< HEAD
 window.location = window.location.pathname + '#/dashboard/chanels/list';
+=======
+>>>>>>> origin/master
             // console.log('success', result);
         })
         .catch(function (error) {
@@ -48,7 +51,11 @@ class addChanel extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+<<<<<<< HEAD
 kanalEkle(apiUrl + '/rest/kanal-ekle', this.state.form);
+=======
+        kanalEkle(apiUrl + '/rest/kanal-ekle', this.state.form);
+>>>>>>> origin/master
     }
 
     render() {

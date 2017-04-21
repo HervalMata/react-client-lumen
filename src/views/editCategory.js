@@ -14,7 +14,11 @@ const kategoriDuzenle = (postUrl, data) => {
             return response.json();
         })
         .then(function (result) {
+<<<<<<< HEAD
             // console.log('success', result);
+=======
+           // console.log('success', result);
+>>>>>>> origin/master
         })
         .catch(function (error) {
             console.log('Request failed', error);
@@ -23,7 +27,11 @@ const kategoriDuzenle = (postUrl, data) => {
 class EditCategory extends Component {
     constructor(props) {
         super(props);
+<<<<<<< HEAD
         // console.log(this.props);
+=======
+       // console.log(this.props);
+>>>>>>> origin/master
         this.state = { form: this.props.current };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,7 +41,11 @@ class EditCategory extends Component {
         let formData = this.state.form;
         let target = event.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;
+<<<<<<< HEAD
        // target.value = formData[name];
+=======
+        target.value = formData[name];
+>>>>>>> origin/master
         let name = target.name;
         formData[name] = value;
         this.setState({ form: formData });
@@ -42,9 +54,16 @@ class EditCategory extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+<<<<<<< HEAD
         this.props.denge();
         kategoriDuzenle(apiUrl + '/rest/kategori-duzenle/' + this.state.form.id, this.state.form);
         this.props.denge();
+=======
+        this.props.denge(this.state.form);
+        kategoriDuzenle(apiUrl + '/rest/kategori-duzenle/' + this.state.form.id, this.state.form);
+
+
+>>>>>>> origin/master
     }
     render() {
         return (
@@ -112,6 +131,13 @@ class EditCategory extends Component {
                             <input value={this.state.form.orderId} type="text" id="orderId" name="orderId" className="form-control input-sm" placeholder="Order Id Sıralama" />
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/master
                 </form>
                 <div className="" hidden><pre>{this.props.current ? JSON.stringify(this.props.current, null, 2) : "yok"}</pre></div>
                 <div className="modal-footer">

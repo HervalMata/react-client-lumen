@@ -52,7 +52,11 @@ class loginComponent extends Component  {
                       <button type="button" type="submit" className="btn btn-primary px-2">Login</button>
                     </div>
                     <div className="col-6 text-right">
+<<<<<<< HEAD
                       <button type="button" className="btn btn-link px-0" hidden>Forgot password?</button>
+=======
+                      <button type="button" className="btn btn-link px-0">Forgot password?</button>
+>>>>>>> origin/master
                     </div>
                   </div>
                 </div>
@@ -61,9 +65,15 @@ class loginComponent extends Component  {
               <div className="card card-inverse card-primary py-3 hidden-md-down" style={{ width: 44 + '%' }}>
                 <div className="card-block text-center">
                   <div>
+<<<<<<< HEAD
                     <h2>BasicMedia Panel</h2>
                     <p>Basic panel for media managment systems.</p>
                     <button type="button" className="btn btn-primary active mt-1" hidden>Register Now!</button>
+=======
+                    <h2>Sign up</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button type="button" className="btn btn-primary active mt-1">Register Now!</button>
+>>>>>>> origin/master
                   </div>
                 </div>
               </div>
