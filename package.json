@@ -15,7 +15,10 @@
     "react-addons-css-transition-group": "^15.4.2",
     "react-addons-transition-group": "^15.4.2",
     "react-breadcrumbs": "^1.5.2",
+<<<<<<< HEAD
+=======
     "react-chartjs-2": "2.0.5",
+>>>>>>> origin/master
     "react-dom": "^15.5.0",
     "react-router": "^3.0.2",
     "reactstrap": "4.2.0"

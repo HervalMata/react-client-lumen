@@ -127,7 +127,12 @@ const kategoriEkle = (postUrl, data) => {
             return response.json();
         })
         .then(function (result) {
+<<<<<<< HEAD
+             window.location = window.location.pathname + '#/dashboard/cats/list';
+            //console.log('success', result);
+=======
             console.log('success', result);
+>>>>>>> origin/master
         })
         .catch(function (error) {
             console.log('Request failed', error);

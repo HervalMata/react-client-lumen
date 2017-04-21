@@ -27,6 +27,13 @@ logout();
             <li className=" nav-title">
               Yönet
             </li>
+<<<<<<< HEAD
+               <li className="nav-item">
+              <Link to={'/dashboard'} className="nav-link" activeClassName="active">
+              <i className="icon-speedometer"></i> Dashboard</Link>
+                </li>
+=======
+>>>>>>> origin/master
              <li className={this.activeRoute("/chanels")}>
               <a className="nav-link nav-dropdown-toggle" href="#" onClick={this.handleClick.bind(this)}><i className="icon-star"></i> Kanallar</a>
               <ul className="nav-dropdown-items">

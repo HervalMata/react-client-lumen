@@ -1,6 +1,10 @@
 import { browserHistory } from 'react-router';
 const loginModel = { 'email': '', 'password': '' }
+<<<<<<< HEAD
+export const apiUrl = 'http://www.canlitv.world'
+=======
 export const apiUrl = 'http://canlitv.world'
+>>>>>>> origin/master
 const getToken = (postUrl, data) => {
     fetch(postUrl, {
         method: 'post',
@@ -17,7 +21,11 @@ const getToken = (postUrl, data) => {
             setIdToken(result.api_token)
         }
     }).catch(function (error) {
+<<<<<<< HEAD
+        browserHistory.push(window.location.pathname + '#/');
+=======
         browserHistory.push('#/');
+>>>>>>> origin/master
     });
 }
 
@@ -35,7 +43,12 @@ function setIdToken(token) {
     localStorage.setItem('api_url', apiUrl);
 
     setTimeout(function () {
+<<<<<<< HEAD
+window.location = window.location.pathname;
+        //location.reload();
+=======
         location.reload();
+>>>>>>> origin/master
     }, 1000);
 
 }
@@ -43,9 +56,15 @@ function setIdToken(token) {
 export function isLoggedIn() {
     const apiToken = localStorage.getItem('api_token');
     if (apiToken) {
+<<<<<<< HEAD
+        browserHistory.push(window.location.pathname + '#/dashboard');
+    } else {
+        browserHistory.push(window.location.pathname + '#/');
+=======
         browserHistory.push('#/dashboard');
     } else {
         browserHistory.push('#/');
+>>>>>>> origin/master
     }
 }
 
