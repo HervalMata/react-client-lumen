@@ -13,7 +13,6 @@ import siteOptions from './views/siteOptions'
 import loginComponent from './views/login'
 import Category from './views/Category'
 import listCategory from './views/listCategory'
-
 export default (
   <Router history={hashHistory}>
     <Route path="/" name="Login" component={Simple}>
